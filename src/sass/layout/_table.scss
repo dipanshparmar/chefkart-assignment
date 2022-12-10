@@ -1,0 +1,64 @@
+@use '../abstracts/' as abs;
+
+table {
+  white-space: nowrap;
+  border-collapse: collapse;
+
+  td, th {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-size: .9rem;
+  }
+
+  thead tr {
+    border-top: .05rem solid abs.$very-light-gray;
+    border-bottom: .05rem solid abs.$very-light-gray;
+  }
+
+  tbody tr {
+    border-bottom: .05rem solid abs.$very-light-gray;
+  }
+
+  .head__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__more-icon {
+      font-size: 1rem;
+      margin-left: 2rem;
+      color: abs.$gray;
+      cursor: pointer;
+    }
+
+    &__popup {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 1.5rem;
+      padding: .5rem 0;
+      border: 0;
+      border-radius: .5rem;
+      box-shadow: .1rem .1rem 1rem abs.$light-gray;
+      background-color: white;
+
+      & span {
+        padding: .8rem 1rem;
+        cursor: pointer;
+        font-size: .9rem;
+
+        &:hover {
+          background-color: abs.$very-light-gray;
+        }
+      }
+    }
+
+    &__bar {
+      font-size: .8rem;
+      font-weight: normal;
+      padding-left: 3rem;
+      color: abs.$light-gray;
+    }
+  }
+}
