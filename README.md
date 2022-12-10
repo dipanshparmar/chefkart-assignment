@@ -1,4 +1,4 @@
-g# How to run?
+### How to run?
 1. Install dependencies
 ```
 npm i
